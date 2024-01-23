@@ -1,0 +1,79 @@
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    .container{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    }
+
+    .container .images{
+    padding: 20px;
+    padding: 10px;
+    }
+
+    .container .images .imgBx{
+    height: 250px;
+    width: 350px;
+    border: 6px solid #777;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    }
+
+    .container .images .imgBx img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+    }
+
+    .container .images .imgBx:hover img{
+    transform: scale(1.1);
+    }
+
+    .container .popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    }
+
+    .container .popup span{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+    transition: 0.5s;
+    }
+
+    .container .popup span:hover{
+    transform: rotate(180deg);
+    }
+
+    .container .popup img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    }

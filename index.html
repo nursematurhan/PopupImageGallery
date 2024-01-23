@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="images">
+            <div class="imgBx">
+                <img src="img1.jpg" alt="img1">
+            </div>
+        </div>
+        <div class="images">
+            <div class="imgBx">
+                <img src="img2.jpg" alt="img2">
+            </div>
+        </div>
+        <div class="images">
+            <div class="imgBx">
+                <img src="img3.jpg" alt="img3">
+            </div>
+        </div>
+        <div class="images">
+            <div class="imgBx">
+                <img src="img4.webp" alt="img4">
+            </div>
+        </div>
+        <div class="images">
+            <div class="imgBx">
+                <img src="img5.jpg" alt="img5">
+            </div>
+        </div>
+        <div class="images">
+            <div class="imgBx">
+                <img src="img6.webp" alt="img6">
+            </div>
+        </div>
+        <div class="popup">
+            <span>&times;</span>
+            <img src="img1.jpg">
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.images img').forEach(image => {
+            image.onlick = () => {
+                document.querySelector('.popup').style.display = 'block';
+                document.querySelector('.popup img').src = image.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup span').onlick = () => {
+            document.querySelector('.popup').style.display ='none';
+        }
+    </script>
+</body>
+</html>
